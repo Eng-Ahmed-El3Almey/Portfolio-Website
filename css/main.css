@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
+}
+
+:root {
+  --main_color: #c9f31d;
+  --p_color:#8a8a8a;
+  --bg_color:#1f1f1f;
+  --white_color:#fff;
+  --black_color: #070707;
+  --border_color: rgba(255,255,255,0.1);
+}
+body {
+  background: #131313;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1500px;
+}
+/* Start Background Lines */
+.bg-lines span {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 1px;
+  background: rgba(255,255,255,0.05);
+  -webkit-animation: left_right 18s infinite;
+  animation: left_right 18s infinite;
+}
+.bg-lines span:nth-child(1) {
+  left: 10%;
+}
+.bg-lines span:nth-child(2) {
+  left: 20%;
+}
+.bg-lines span:nth-child(3) {
+  left: 30%;
+}
+.bg-lines span:nth-child(4) {
+  left: 40%;
+}
+.bg-lines span:nth-child(5) {
+  left: 50%;
+}
+.bg-lines span:nth-child(6) {
+  left: 60%;
+}
+.bg-lines span:nth-child(7) {
+  left: 70%;
+}
+.bg-lines span:nth-child(8) {
+  left: 80%;
+}
+.bg-lines span:nth-child(9) {
+  left: 90%;
+}
+@keyframes left_right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+    100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+/* End Background Lines */
+/* Start Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header nav .logo img {
+  width: 200px;
+}
+header nav .links {
+  display: flex;
+  gap: 40px;
+}
+header nav .links a {
+  color: var(--white_color);
+  text-transform: capitalize;
+  font-size: 18px;
+  transition: 0.3s;
+}
+header nav .links a:hover {
+  color: var(--main_color);
+}
+header nav .icons {
+  display: flex;
+  gap: 30px ;
+}
+header nav .icons a {
+  color: var(--main_color);
+  font-size: 28px;
+  transition: 0.3s;
+}
+header nav .icons a:hover {
+  scale: 1.5;
+}
