@@ -10,11 +10,11 @@
 
 :root {
   --main_color: #c9f31d;
-  --p_color:#8a8a8a;
-  --bg_color:#1f1f1f;
-  --white_color:#fff;
+  --p_color: #8a8a8a;
+  --bg_color: #1f1f1f;
+  --white_color: #fff;
   --black_color: #070707;
-  --border_color: rgba(255,255,255,0.1);
+  --border_color: rgba(255, 255, 255, 0.1);
 }
 body {
   background: #131313;
@@ -27,7 +27,12 @@ body {
 img {
   width: 100%;
 }
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--white_color);
   font-family: "DM Sans", sans-serif;
 }
@@ -66,6 +71,13 @@ p {
 section {
   padding: 80px 0;
 }
+.top_section {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.top_section h2 {
+  font-size: 30px;
+}
 /* Start Background Lines */
 .bg-lines span {
   position: fixed;
@@ -73,7 +85,7 @@ section {
   z-index: -1;
   height: 100%;
   width: 1px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   -webkit-animation: left_right 18s infinite;
   animation: left_right 18s infinite;
 }
@@ -113,7 +125,7 @@ section {
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
   }
-    100% {
+  100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
@@ -126,6 +138,12 @@ header {
   left: 0;
   right: 0;
   height: 100px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+header.active {
+  background: var(--black_color);
+  border-bottom: 1px solid #56565697;
 }
 header nav {
   display: flex;
@@ -151,7 +169,7 @@ header nav .links a:hover {
 }
 header nav .icons {
   display: flex;
-  gap: 30px ;
+  gap: 30px;
 }
 header nav .icons a {
   color: var(--main_color);
@@ -256,8 +274,44 @@ header nav .icons a:hover {
   margin-bottom: 30px;
 }
 .about .div_text ul li i {
-  color: var(--main_color)
+  color: var(--main_color);
 }
 .about .div_img {
   width: 35%;
+}
+/* End About Sec */
+/* Start Services Sec */
+.services .boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.services .boxes .box {
+  width: 30%;
+  text-align: center;
+  padding: 50px 20px;
+  border: 1px solid var(--border_color);
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+.services .boxes .box i {
+  color: var(--main_color);
+  font-size: 70px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+.services .boxes .box h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.services .boxes .box p {
+  margin-bottom: 40px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.services .boxes .box:hover {
+  border-color: var(--main_color);
+}
+.services .boxes .box:hover i {
+  scale: 1.3;
 }
